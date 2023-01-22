@@ -5814,7 +5814,7 @@ class NS {
     if (window.electronAPI) return window.electronAPI.importFile(t);
   }
   get CORS() {
-    return window.electronAPI ? "" : "https://api.allorigins.win/get?url=";
+    return window.electronAPI ? "" : "";
   }
   get isElectron() {
     return window.electronAPI != null;
@@ -39573,17 +39573,15 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
                       })),
                       i.forEach(function (V, q) {
                         var J = V.length === s.globals.dataPoints,
-                          te = r.graphics
-                            .group()
-                            .attr({
-                              class: "apexcharts-series",
-                              "data:longestSeries": J,
-                              seriesName: A.escapeString(
-                                s.globals.seriesNames[q]
-                              ),
-                              rel: q + 1,
-                              "data:realIndex": q,
-                            });
+                          te = r.graphics.group().attr({
+                            class: "apexcharts-series",
+                            "data:longestSeries": J,
+                            seriesName: A.escapeString(
+                              s.globals.seriesNames[q]
+                            ),
+                            rel: q + 1,
+                            "data:realIndex": q,
+                          });
                         (r.dataRadiusOfPercent[q] = []),
                           (r.dataRadius[q] = []),
                           (r.angleArr[q] = []),
@@ -44637,15 +44635,13 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
               })),
               r.extend(r.Defs, {
                 pattern: function (b, C, D) {
-                  return this.put(new r.Pattern())
-                    .update(D)
-                    .attr({
-                      x: 0,
-                      y: 0,
-                      width: b,
-                      height: C,
-                      patternUnits: "userSpaceOnUse",
-                    });
+                  return this.put(new r.Pattern()).update(D).attr({
+                    x: 0,
+                    y: 0,
+                    width: b,
+                    height: C,
+                    patternUnits: "userSpaceOnUse",
+                  });
                 },
               }),
               (r.Shape = r.invent({
