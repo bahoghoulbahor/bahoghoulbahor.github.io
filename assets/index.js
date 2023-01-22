@@ -5814,6 +5814,7 @@ class NS {
     if (window.electronAPI) return window.electronAPI.importFile(t);
   }
   get CORS() {
+    console.log(1);
     return window.electronAPI ? "" : "";
   }
   get isElectron() {
